@@ -1,10 +1,10 @@
 ﻿  MainPrueba.cpp
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(264,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(800,13): warning C4552: "-": el resultado de la expresión no se usa
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(895,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(896,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(900,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(901,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(903,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(904,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(273,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(856,13): warning C4552: "-": el resultado de la expresión no se usa
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(960,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(961,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(965,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(966,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(968,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Documents\ProyectoCompuGrafica\ProyectoFinal\MainPrueba.cpp(969,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> C:\Users\DELL\Documents\ProyectoCompuGrafica\Debug\ProyectoFinal.exe

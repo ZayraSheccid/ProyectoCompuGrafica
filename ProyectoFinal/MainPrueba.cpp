@@ -97,6 +97,13 @@ float movPikZ = 0.0f;
 bool activeMew = true;
 float jump = 5.0f;
 
+//pokebola abierta-cerrada
+bool activAnim1 = true; //animacion activada
+float rotTile1 = 0;
+bool pokeballAbierta = false;
+bool n1 = false; //no permite el cambio 
+
+
 
 glm::vec3 PosIniP(-9.5f, -0.5f, 9.0f);
 glm::vec3 PosIni(1.5f, 1.15f, 4.1f);
@@ -234,6 +241,8 @@ int main()
 	Model mew((char*)"Models/Pokemon/mew.obj");
 	Model arbol((char*)"Models/Pokemon/arbol1.obj");
 	Model pasto((char*)"Models/Pokemon/pasto.obj");
+	Model pokebolainf((char*)"Models/Pokemon/Pokeball_abajo.obj");
+	Model pokebolasup((char*)"Models/Pokemon/Pokeball_arriba.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -582,15 +591,32 @@ int main()
 
 		//pedestal
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-20.0f, -0.46f, 5.0f));
+		model = glm::translate(model, glm::vec3(-17.0f, -0.46f, 5.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pedes.Draw(lightingShader);
 
 		//pedestal
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-20.0f, -0.46f, -5.0f));
+		model = glm::translate(model, glm::vec3(-17.0f, -0.46f, -5.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pedes.Draw(lightingShader);
+
+		//pokebola abierta
+		//glm::mat4 model(1);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-22.0f, 0.46f, 0.0f));
+		model = glm::rotate(model, glm::radians(-rotTile1), glm::vec3(1.0f, 0.0f, 0.0f)); //se abre la pokebola
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//model = glm::mat4(1); //seteo de matriz
+		pokebolasup.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-22.0f, 0.46f, 0.0f));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+		pokebolainf.Draw(lightingShader);
+
 
 
 
@@ -783,6 +809,36 @@ void DoMovement()
 		}
 	}
 
+	if (activAnim1 && n1) // si ambas estan encendidas
+	{
+		if (pokeballAbierta)
+		{
+			if (rotTile1 < 45.0f)
+			{
+				rotTile1 += 10.0f * deltaTime; // Incrementa la rotación 
+			}
+			else
+			{
+				n1 = false; // fin de la aimacion
+			}
+		}
+		else
+		{
+			if (rotTile1 > 0.0f)
+			{
+				rotTile1 -= 10.0f * deltaTime; // Decrementa la rotación
+			}
+			else
+			{
+				n1 = false;
+			}
+		}
+	}
+
+	if (n1) // no permite cambios en el ciclo
+		return;
+
+
 }
 
 
@@ -883,6 +939,15 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 			LightP4 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
 		}
 
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_6) == GLFW_PRESS)
+	{
+		if (!n1) // Se niega la modificacion mientras este animado
+		{
+			pokeballAbierta = !pokeballAbierta;
+			n1 = true; // Inicia la animación 
+		}
 	}
 
 }
