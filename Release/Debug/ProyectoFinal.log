@@ -1,0 +1,12 @@
+﻿  MainPrueba.cpp
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(264,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(750,13): warning C4552: "-": el resultado de la expresión no se usa
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(845,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(846,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(850,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(851,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(853,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\ProyectoFinal\MainPrueba.cpp(854,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(SOIL2.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  ProyectoFinal.vcxproj -> C:\Users\DELL\Downloads\316159126_PROYECTOFINAL2024-1_Gpo12\Debug\ProyectoFinal.exe

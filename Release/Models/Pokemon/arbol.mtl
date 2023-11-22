@@ -1,0 +1,27 @@
+newmtl Material_Leaves
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd LEaf_Oak_Gum_AE3D_10302022-A.png
+Ni 1.45
+Ks 0.05 0.05 0.05
+Ns 0.06
+newmtl Material_Trunk_and_Primary_Limbs
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd GenTree_2_Trunk_Limbs_AE3D_03312023-A-DIFFUSE.png
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl Material_Twigs
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd Gentree_2_Twigs_AE3D_04022023-B-DIFFUSE.jpg
+Ni 1.45
+Ks 0.00 0.00 0.00
+Ns 0.06
