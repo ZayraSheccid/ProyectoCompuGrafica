@@ -223,7 +223,7 @@ int main()
 	Model piso((char*)"Models/Pokemon/pisoMus.obj");
 	Model pedes2((char*)"Models/Pokemon/pedes2.obj");
 	Model jero((char*)"Models/Pokemon/jeropok.obj");
-	Model fachada((char*)"Models/Pokemon/fachada1.obj");
+	Model fachada((char*)"Models/Pokemon/Pokemon_center_final.obj");
 	Model poke2((char*)"Models/Pokemon/poke2.obj");
 	Model pintura((char*)"Models/Pokemon/pinturaPok.obj");
 	Model pedes3((char*)"Models/Pokemon/pedesPok.obj");
@@ -398,6 +398,9 @@ int main()
 		mesa.Draw(lightingShader);
 		glDisable(GL_BLEND);  //Desactiva el canal alfa 
 		
+
+		//RECEPCION
+		
 		//sofa
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-13.0f, -0.5f, 3.5f));
@@ -488,6 +491,8 @@ int main()
 		model = glm::translate(model, glm::vec3(-11.0f, -0.47f, -6.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		maceta.Draw(lightingShader);
+
+		//EXTERIOR
 		
 		//mesa exterior
 		model = glm::mat4(1);
@@ -518,31 +523,76 @@ int main()
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f, -1.3f, -18.0f));
+		model = glm::translate(model, glm::vec3(8.5f, -1.3f, -28.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
 		
 		//mimkyu
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f+PosX, -1.3f, -20.0f));
+		model = glm::translate(model, glm::vec3(8.5f+PosX, -1.3f, -30.0f));
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pika.Draw(lightingShader);
 
 		//mew
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f+PosXM, -1.3f, -16.0f));
+		model = glm::translate(model, glm::vec3(8.5f+PosXM, -1.3f, -26.0f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		mew.Draw(lightingShader);
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-8.5f, -1.3f, -23.0f));
+		model = glm::translate(model, glm::vec3(-8.5f, -1.3f, -35.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
+
+		//SALA 1 DERECHA
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(28.0f, -0.46f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(20.0f, -0.46f, 5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(20.0f, -0.46f, -5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+
+		//SALA 2 IZQUIERDA
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-28.0f, -0.46f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-20.0f, -0.46f, 5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+		//pedestal
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-20.0f, -0.46f, -5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pedes.Draw(lightingShader);
+
+
 
 		glBindVertexArray(0);
 
