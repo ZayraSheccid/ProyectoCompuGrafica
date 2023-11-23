@@ -1,0 +1,45 @@
+newmtl body_a
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_body_a_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00
+newmtl body_b
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_body_b_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00
+newmtl body_c
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_body_b_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00
+newmtl pm0642_11_00_l_eye
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_eye_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00
+newmtl pm0642_11_00_r_eye
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_eye_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00

@@ -1,0 +1,27 @@
+newmtl Pii_MORUFON_body
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd Pii_MORUFON_body.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl Pii_MORUFON_eye1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd Pii_MORUFON_eye.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl Pii_MORUFON_wing
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd Pii_MORUFON_wing.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00

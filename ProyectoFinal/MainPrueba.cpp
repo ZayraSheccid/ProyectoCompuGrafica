@@ -649,7 +649,7 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pokeboinf.Draw(lightingShader);
 
-		//charmander
+		
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(18.0f, 0.46f, 0.9f));
 		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));

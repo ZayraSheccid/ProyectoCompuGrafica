@@ -1,4 +1,4 @@
-newmtl karakarM
+newmtl kaka_karakarM
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.50 0.50 0.50
@@ -7,7 +7,7 @@ map_Kd Texture_0_CMP.png
 Ni 1.00
 Ks 0.23 0.51 0.07
 Ns 50.00
-newmtl karakarM0
+newmtl kaka_karakarM0
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.50 0.50 0.50
@@ -16,7 +16,7 @@ map_Kd Texture_0_CMP.png
 Ni 1.00
 Ks 0.23 0.51 0.07
 Ns 50.00
-newmtl karakarM3
+newmtl kaka_karakarM3
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.50 0.50 0.50
@@ -25,7 +25,7 @@ map_Kd Texture_0_CMP.png
 Ni 1.00
 Ks 0.23 0.51 0.07
 Ns 50.00
-newmtl lambert2
+newmtl kaka_lambert2
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -33,7 +33,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.23 0.51 0.07
 Ns 50.00
-newmtl mat3
+newmtl kaka_mat3
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.50 0.50 0.50
