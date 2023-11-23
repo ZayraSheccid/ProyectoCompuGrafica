@@ -1,0 +1,50 @@
+newmtl golbat_f_Body00
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Body1_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pm0042_00_Body2.png
+Ns 0.00
+newmtl golbat_f_Body01
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Body1_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pm0042_00_Body2.png
+Ns 0.00
+newmtl golbat_f_Body02
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Body1_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pm0042_00_Body2.png
+Ns -1.96
+newmtl golbat_f_Body04
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Body1_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pm0042_00_Body2.png
+Ns -1.96
+newmtl golbat_f_Eye
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Eye1_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pm0042_00_Eye2.png
+Ns -1.96

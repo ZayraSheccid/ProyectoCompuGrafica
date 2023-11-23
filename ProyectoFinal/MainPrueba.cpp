@@ -243,6 +243,11 @@ int main()
 	Model pasto((char*)"Models/Pokemon/pasto.obj");
 	Model pokebolainf((char*)"Models/Pokemon/Pokeball_abajo.obj");
 	Model pokebolasup((char*)"Models/Pokemon/Pokeball_arriba.obj");
+	Model charma((char*)"Models/Pokemon/charmander.obj");
+	Model poke1((char*)"Models/Pokemon/poke1.obj");
+	Model arcanine((char*)"Models/Pokemon/arcanine.obj");
+	Model veno((char*)"Models/Pokemon/veno.obj");
+
 
 
 	// First, set the container's VAO (and VBO)
@@ -532,14 +537,14 @@ int main()
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f, -1.3f, -28.0f));
+		model = glm::translate(model, glm::vec3(-28.5f, -1.3f, -28.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
 		
 		//mimkyu
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f+PosX, -1.3f, -30.0f));
+		model = glm::translate(model, glm::vec3(8.5f+PosX, -1.3f, -28.0f));
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pika.Draw(lightingShader);
@@ -553,12 +558,12 @@ int main()
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-8.5f, -1.3f, -35.0f));
+		model = glm::translate(model, glm::vec3(8.5f, -1.3f, -26.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
 
-		//SALA 1 DERECHA
+		//SALA 2 DERECHA
 
 		//pedestal
 		model = glm::mat4(1);
@@ -581,7 +586,7 @@ int main()
 		pedes.Draw(lightingShader);
 
 
-		//SALA 2 IZQUIERDA
+		//SALA 1 IZQUIERDA
 
 		//pedestal
 		model = glm::mat4(1);
@@ -614,9 +619,34 @@ int main()
 		model = glm::translate(model, glm::vec3(-22.0f, 0.46f, 0.0f));
 		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
 		pokebolainf.Draw(lightingShader);
 
+		//charmander
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-22.0f, 0.46f, 0.9f));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		charma.Draw(lightingShader);
+
+		//puff
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-17.0f, 1.26f, -5.0f));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		poke1.Draw(lightingShader);
+
+
+		//golbat
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-17.0f, 1.26f, 5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arcanine.Draw(lightingShader);
+
+		//venomoth
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-28.0f, 1.26f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		veno.Draw(lightingShader);
 
 
 
