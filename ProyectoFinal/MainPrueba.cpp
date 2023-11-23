@@ -103,6 +103,11 @@ float rotTile1 = 0;
 bool pokeballAbierta = false;
 bool n1 = false; //no permite el cambio 
 
+//pokebola abierta-cer
+bool activAnim2 = true; //animacion activada
+float rotTile2 = 0;
+bool pokeballAbierta2 = false;
+bool n2 = false; //no permite el cambio 
 
 
 glm::vec3 PosIniP(-9.5f, -0.5f, 9.0f);
@@ -112,7 +117,7 @@ glm::vec3 LightP1;
 glm::vec3 LightP2;
 glm::vec3 LightP3;
 glm::vec3 LightP4;
-
+glm::vec3 LightP5;
 
 // Positions of the point lights
 glm::vec3 pointLightPositions[] = {
@@ -169,6 +174,7 @@ float vertices[] = {
 // Deltatime
 GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
 GLfloat lastFrame = 0.0f;  	// Time of last frame
+
 
 
 int main()
@@ -250,7 +256,10 @@ int main()
 	Model thun((char*)"Models/Pokemon/thun.obj");
 	Model wee((char*)"Models/Pokemon/wee.obj");
 	Model geo((char*)"Models/Pokemon/geo.obj");
-
+	Model pokebosup((char*)"Models/Pokemon/Pokearr.obj");
+	Model pokeboinf((char*)"Models/Pokemon/Pokeab.obj");
+	Model kaka((char*)"Models/Pokemon/Kaka.obj");
+	Model chari((char*)"Models/Pokemon/charizard.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -352,8 +361,9 @@ int main()
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[3].diffuse"), LightP4.x, LightP4.y, LightP4.z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[3].specular"), LightP4.x, LightP4.y, LightP4.z);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].constant"), 1.0f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].linear"), 0.07f);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].linear"), 0.027f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].quadratic"), 0.017f);
+		
 
 		// SpotLight posicion y direccion se da la de la camara 
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
@@ -368,7 +378,7 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.outerCutOff"), glm::cos(glm::radians(15.0f))); //cono interno menor al externo 
 
 		// Set material properties
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 8.0f);
 
 		// Create camera transformations
 		glm::mat4 view;
@@ -626,6 +636,27 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		lampara.Draw(lightingShader);
 
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(18.0f, 0.46f, 0.0f));
+		model = glm::rotate(model, glm::radians(-rotTile2), glm::vec3(1.0f, 0.0f, 0.0f)); //se abre la pokebola
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//model = glm::mat4(1); //seteo de matriz
+		pokebosup.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(18.0f, 0.46f, 0.0f));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		pokeboinf.Draw(lightingShader);
+
+		//charmander
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(18.0f, 0.46f, 0.9f));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		kaka.Draw(lightingShader);
+
+
 
 		//SALA 1 IZQUIERDA
 
@@ -694,7 +725,6 @@ int main()
 		model = glm::translate(model, glm::vec3(-22.0f, 17.5f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		lampara.Draw(lightingShader);
-
 
 
 		glBindVertexArray(0);
@@ -915,6 +945,35 @@ void DoMovement()
 	if (n1) // no permite cambios en el ciclo
 		return;
 
+	if (activAnim2 && n2) // si ambas estan encendidas
+	{
+		if (pokeballAbierta2)
+		{
+			if (rotTile2 < 45.0f)
+			{
+				rotTile2 += 10.0f * deltaTime; // Incrementa la rotación 
+			}
+			else
+			{
+				n2 = false; // fin de la aimacion
+			}
+		}
+		else
+		{
+			if (rotTile2 > 0.0f)
+			{
+				rotTile2 -= 10.0f * deltaTime; // Decrementa la rotación
+			}
+			else
+			{
+				n2 = false;
+			}
+		}
+	}
+
+	if (n2) // no permite cambios en el ciclo
+		return;
+
 
 }
 
@@ -928,7 +987,7 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		rotatePoke2 = !rotatePoke2; // Cambia el estado de la rotación
 	}
 
-	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
+	if (key == GLFW_KEY_5 && action == GLFW_PRESS)
 	{
 		activePot - false; // Cambia el estado de la rotación
 	}
@@ -1024,6 +1083,15 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		{
 			pokeballAbierta = !pokeballAbierta;
 			n1 = true; // Inicia la animación 
+		}
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_7) == GLFW_PRESS)
+	{
+		if (!n2) // Se niega la modificacion mientras este animado
+		{
+			pokeballAbierta2 = !pokeballAbierta2;
+			n2 = true; // Inicia la animación 
 		}
 	}
 
