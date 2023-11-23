@@ -1,0 +1,63 @@
+newmtl body_c
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pm0642_11_00_body_b_alb.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 50.00
+newmtl texture_0_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_0.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl texture_1_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_1.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl texture_2_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_2.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl texture_13_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_13.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl texture_14_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_14.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl texture_17_png1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd texture_17.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00

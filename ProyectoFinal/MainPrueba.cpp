@@ -119,7 +119,7 @@ glm::vec3 pointLightPositions[] = {
 	glm::vec3(7.0f, 1.0f, 0.0f),
 	glm::vec3(1.0f, 1.0f, -3.0f),
 	glm::vec3(-4.5f, 0.0f, -4.0f),
-	glm::vec3(0.0f, 11.3f, -0.12f)
+	glm::vec3(0.0f, 18.3f, -0.12f)
 };
 
 float vertices[] = {
@@ -247,6 +247,9 @@ int main()
 	Model poke1((char*)"Models/Pokemon/poke1.obj");
 	Model arcanine((char*)"Models/Pokemon/arcanine.obj");
 	Model veno((char*)"Models/Pokemon/veno.obj");
+	Model thun((char*)"Models/Pokemon/thun.obj");
+	Model wee((char*)"Models/Pokemon/wee.obj");
+	Model geo((char*)"Models/Pokemon/geo.obj");
 
 
 
@@ -490,7 +493,7 @@ int main()
 		
 		//lampara
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 10.5f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 17.5f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		lampara.Draw(lightingShader);
 
@@ -510,7 +513,7 @@ int main()
 		
 		//mesa exterior
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, -1.3f, -18.0f));
+		model = glm::translate(model, glm::vec3(0.0f, -0.9f, -18.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		mesaext.Draw(lightingShader);
 
@@ -537,31 +540,46 @@ int main()
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-28.5f, -1.3f, -28.0f));
+		model = glm::translate(model, glm::vec3(-28.5f, -0.9f, -26.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
 		
 		//mimkyu
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f+PosX, -1.3f, -28.0f));
+		model = glm::translate(model, glm::vec3(8.5f+PosX, -0.9f, -28.0f));
 		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pika.Draw(lightingShader);
 
 		//mew
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f+PosXM, -1.3f, -26.0f));
+		model = glm::translate(model, glm::vec3(8.5f+PosXM, -1.0f, -24.0f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		mew.Draw(lightingShader);
 
 		//arbol
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(8.5f, -1.3f, -26.0f));
+		model = glm::translate(model, glm::vec3(8.5f, -0.9f, -26.0f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
+
+		//arbol
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(28.5f, -0.9f, -26.0f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol.Draw(lightingShader);
+
+		//arbol
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-10.5f, -0.9f, -26.0f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		arbol.Draw(lightingShader);
+
 
 		//SALA 2 DERECHA
 
@@ -571,6 +589,11 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pedes.Draw(lightingShader);
 
+		//thundurus
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(28.0f, 1.26f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		thun.Draw(lightingShader);
 
 		//pedestal
 		model = glm::mat4(1);
@@ -578,12 +601,30 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pedes.Draw(lightingShader);
 
+		//weedle
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(20.0f, 1.26f, 5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		wee.Draw(lightingShader);
+
 
 		//pedestal
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(20.0f, -0.46f, -5.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pedes.Draw(lightingShader);
+
+		//geodude
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(20.0f, 1.26f, -5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		geo.Draw(lightingShader);
+
+		//lampara
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(20.0f, 17.5f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		lampara.Draw(lightingShader);
 
 
 		//SALA 1 IZQUIERDA
@@ -647,6 +688,12 @@ int main()
 		model = glm::translate(model, glm::vec3(-28.0f, 1.26f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		veno.Draw(lightingShader);
+
+		//lampara
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-22.0f, 17.5f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		lampara.Draw(lightingShader);
 
 
 
@@ -770,8 +817,8 @@ void DoMovement()
 			pikaSpeed = -pikaSpeed;
 		}
 		// Verificar límite inferior
-		else if (MewPosY < -1.3f) {
-			MewPosY = -1.3f;
+		else if (MewPosY < -0.9f) {
+			MewPosY = -0.9f;
 			// Cambiar la dirección al alcanzar el límite inferior
 			pikaSpeed = -pikaSpeed;
 		}
